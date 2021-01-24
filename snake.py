@@ -20,12 +20,8 @@ keyPressed = False
 def main(dead):
     '''
         Fonction principale qui exécute tout le programme
-
         Args :
             dead : Etat de vie ou de mort du serpent
-
-        Return :
-            None
     '''
     initializeGame() #On initialise le jeu
     bindKeys() #On defini les touches pour jouer
@@ -51,7 +47,6 @@ def movements(direction):
     '''
         Fait bouger le serpent selon la direction selectionnée et
         teste si on passe sur un bonus.
-
         Args :
             direction : Direction dans laquelle le serpent doit aller 
         
@@ -112,9 +107,6 @@ def death():
         Défini l'état du serpent selon s'il est hors des limites ou s'il
         se touche lui même
 
-        Args:
-            None
-
         Return :
             bool : L'état de vie ou de mort
     '''
@@ -131,25 +123,14 @@ def death():
 def bindKeys():
     '''
         Associe un appuie sur une touche à la fonction whichKey()
-
-        Args : 
-            None
-        
-        Return :
-            None
     '''
-
     root.bind("<Key>", lambda e: whichKey(e.keysym)) #On recupère n'import quelle touche du clavier
 
 def whichKey(key):
     '''
         Change la direction du serpent selon les touches appuyées
-
         Args :
             key : Touche appuyée
-        
-        Return :
-            None
     '''
 
     global direction
@@ -174,12 +155,8 @@ def whichKey(key):
 def newBonus(number):
     '''
         Ajoute une nombre N de bonus sur la carte du jeu
-
         Args :
             number : Nombre de bonus à ajouter
-
-        Return :
-            None
     '''
     numberOfBonus = len(bonus)
     for i in range(number):
@@ -199,16 +176,11 @@ def newBonus(number):
 def addBodyPartToSnake(number, row=None, column=None):
     '''
         Ajoute un nombre N de partie à la queue du serpent
-
         Args :
             number : Nombre de partie à rajouter
             row ?: Ligne à laquelle ajouter les parties
             column ?: Colonne à laquelle ajouter les parties
-        
-        Return :
-            None
     '''
-
     lengthSnake = len(snakeBody)
 
     #On défini l'emplacement où ajouter les parties si non précisée

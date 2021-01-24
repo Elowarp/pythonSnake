@@ -193,7 +193,7 @@ def addBodyPartToSnake(number, row=None, column=None):
         snakeBody.append(tk.Canvas(root, width=10, height=10, bd=0, highlightthickness=0))
         snakeBody[lengthSnake + i].grid(row=row, column=column)
         snakeBody[lengthSnake + i].create_rectangle(0, 0, 10, 10, fill="green")
-        snakeBodyPos.append((column-i, row))
+        snakeBodyPos.append((column, row))
 
 main(dead)
 root.mainloop()
